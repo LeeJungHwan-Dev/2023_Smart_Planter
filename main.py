@@ -16,8 +16,7 @@ firebase_admin.initialize_app(cred, {
 upload.initialize_firebase_app()
 server.initialize_firebase_app()
 
-#upload.upload_file("test.png","file.png")
-server.update()
+upload.upload_file("photo.png","file.png")
 server.getPow()
 carmera.takePic()
 

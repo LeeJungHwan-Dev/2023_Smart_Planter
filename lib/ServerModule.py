@@ -31,6 +31,8 @@ def initialize_firebase_app():
                 'storageBucket': 'smart-planter-cde3d.appspot.com'
             })
 
+            update()
+
         # Firebase 앱 가져오기
         db = firestore.client()
         doc_ref = db.collection(u'led').document(u'power')

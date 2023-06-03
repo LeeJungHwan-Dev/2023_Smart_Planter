@@ -1,13 +1,18 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
+from datetime import datetime
 
 # 스토리지 버킷 참조
 bucket = None
 
 # 파일 업로드
 def upload_file(source_file, destination_blob_name):
-    blob = bucket.blob(destination_blob_name)
+
+    # 현재 날짜와 시간 가져오기
+    now = datetime.now()
+    now_str = now.strftime("%Y-%m-%d %H:%M:%S_")
+    blob = bucket.blob(now_str+destination_blob_name)
     blob.upload_from_filename(source_file)
 
 # 파일 다운로드
