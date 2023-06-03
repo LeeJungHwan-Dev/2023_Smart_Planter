@@ -1,6 +1,6 @@
 import firebase_admin
 import threading
-import LedModule as led
+import lib.LedModule as led
 from firebase_admin import credentials
 from firebase_admin import firestore
 
@@ -17,7 +17,7 @@ def getPow():
 
     if doc.exists:
         value = doc.to_dict()
-        led.changeLed(doc.to_dict())
+        led.changeLed(int(value["pow"]))
 
 def initialize_firebase_app():
     global db
@@ -43,6 +43,8 @@ def on_snapshot(doc_snapshot, changes, read_time):
     for doc in doc_snapshot:
         doc_dict = doc.to_dict()
         #pow 필드값이 존재할 경우 변경될 때마다 led 값 변경
-        if "pow" in doc_dict:
-            led.changeLed(doc_dict["old_pow"])
+        if "old_pow" in doc_dict:
+            old_pow = int(doc_dict["old_pow"])  # int로 변환
+            LedModule.changeLed(old_pow)
+
     callback_done.set()

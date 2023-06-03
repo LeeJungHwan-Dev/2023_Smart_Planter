@@ -9,6 +9,6 @@ Led = GPIO.PWM(18,60) # 60헤르츠 LED 스타트
 Led.start(0)
 
 def changeLed(pow):
-    Led.ChangeDutyCycle(pow)
+    Led.ChangeDutyCycle(int(pow))
 
 
