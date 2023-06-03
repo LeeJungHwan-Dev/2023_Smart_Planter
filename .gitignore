@@ -31,3 +31,6 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+#serviceKey
+smart-planter-cde3d-firebase-adminsdk-4p05t-46a217b1d6.json
