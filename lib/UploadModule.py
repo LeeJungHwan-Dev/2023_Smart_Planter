@@ -2,9 +2,6 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
 
-file_path = "1111.png"
-upload_name = "file.png"
-
 # Firebase 서비스 계정 키 파일의 경로
 cred = credentials.Certificate("smart-planter-cde3d-firebase-adminsdk-4p05t-46a217b1d6.json")
 
@@ -30,6 +27,3 @@ def download_file(source_blob_name, destination_file):
 def delete_file(blob_name):
     blob = bucket.blob(blob_name)
     blob.delete()
-
-# 사용 예시
-upload_file(file_path, upload_name)
