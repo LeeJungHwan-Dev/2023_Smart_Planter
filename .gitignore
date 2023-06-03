@@ -37,3 +37,6 @@ smart-planter-cde3d-firebase-adminsdk-4p05t-46a217b1d6.json
 
 #macOS SystemFile
 .DS_Store
+
+#pyCache
+lib/__pycache__

@@ -2,16 +2,8 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
 
-# Firebase 서비스 계정 키 파일의 경로
-cred = credentials.Certificate("smart-planter-cde3d-firebase-adminsdk-4p05t-46a217b1d6.json")
-
-# Firebase 앱 초기화
-firebase_admin.initialize_app(cred, {
-    'storageBucket': 'smart-planter-cde3d.appspot.com'
-})
-
 # 스토리지 버킷 참조
-bucket = storage.bucket()
+bucket = None
 
 # 파일 업로드
 def upload_file(source_file, destination_blob_name):
@@ -27,3 +19,18 @@ def download_file(source_blob_name, destination_file):
 def delete_file(blob_name):
     blob = bucket.blob(blob_name)
     blob.delete()
+
+def initialize_firebase_app():
+    global bucket
+    if bucket is None:  # 이미 초기화되었는지 확인
+        if not firebase_admin._apps:
+            # Firebase 서비스 계정 키 파일의 경로
+            cred = firebase_admin.credentials.Certificate("smart-planter-cde3d-firebase-adminsdk-4p05t-46a217b1d6.json")
+
+            # Firebase 앱 초기화
+            firebase_admin.initialize_app(cred, {
+                'storageBucket': 'smart-planter-cde3d.appspot.com'
+            })
+
+        # Firebase 앱 가져오기
+        bucket = storage.bucket()
