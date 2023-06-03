@@ -1,6 +1,7 @@
 #import lib.LedModule as led
 import lib.ServerModule as server
 import lib.UploadModule as upload
+import lib.CameraModule as carmera
 import firebase_admin
 from firebase_admin import credentials
 
@@ -18,6 +19,7 @@ server.initialize_firebase_app()
 #upload.upload_file("test.png","file.png")
 server.update()
 server.getPow()
+carmera.takePic()
 
 
 while True:
