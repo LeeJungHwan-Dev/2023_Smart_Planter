@@ -64,14 +64,24 @@ class DataGet(val context: Context) {
     }
 
     fun getKeyList() : ArrayList<String>{
+        if (planterKeyList.size == 0){
+            planterKeyList.add("")
+        }
         return planterKeyList
     }
 
     fun getStateList() : ArrayList<String>{
+        if (planterStateList.size == 0){
+            planterStateList.add("")
+        }
         return planterStateList
     }
 
     fun getPicList() : ArrayList<String>{
+        if(planterPicList.size == 0){
+            planterPicList.add("")
+        }
+        planterPicList.reverse()
         return planterPicList
     }
 

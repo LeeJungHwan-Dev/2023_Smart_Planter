@@ -1,8 +1,7 @@
-#import lib.LedModule as led
+import lib.LedModule as led
 import lib.ServerModule as server
-import lib.UploadModule as upload
-import lib.CameraModule as carmera
 import firebase_admin
+import time
 from firebase_admin import credentials
 
 # Firebase 서비스 계정 키 파일의 경로
@@ -13,16 +12,9 @@ firebase_admin.initialize_app(cred, {
     'storageBucket': 'smart-planter-cde3d.appspot.com'
 })
 
-upload.initialize_firebase_app()
 server.initialize_firebase_app()
 
-
-carmera.takePic()
-upload.upload_file("photo.png","file.png")
-server.getPow_R()
-server.getPow_G()
-server.getPow_B()
-
+server.getPow_RGB()
 
 while True:
     None

@@ -43,7 +43,7 @@ class DataSend(context : Context){
     }
 
 
-    fun setTime(time : HashMap<String,String>){
+    fun setTime(time : HashMap<String,Long>){
         db.collection(spf.getString("eName","default")!!).document("Time").set(time)
     }
 

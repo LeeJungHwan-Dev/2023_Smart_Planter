@@ -21,13 +21,18 @@ class WaterControllActivity : AppCompatActivity() {
 
         binding.timeSetButton.setOnClickListener {
             val data = hashMapOf(
-                "time" to binding.timePicker.hour.toString() +":"+binding.timePicker.minute.toString()
+                "time" to convertToMilliseconds(binding.timePicker.hour,binding.timePicker.minute)
             )
             dateModel.setTime(data)
             Toast.makeText(this,"시간 설정 완료.",Toast.LENGTH_SHORT).show()
         }
 
 
+    }
+
+    fun convertToMilliseconds(hour: Int, minute: Int): Long {
+        val totalMilliseconds = hour * 60 * 60 * 1000 + minute * 60 * 1000
+        return totalMilliseconds.toLong()
     }
 
     override fun onBackPressed() {

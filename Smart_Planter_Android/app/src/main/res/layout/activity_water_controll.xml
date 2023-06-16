@@ -14,7 +14,7 @@
         android:id="@+id/waterLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="원하는 시간을 선택해주세요."
+        android:text="원하는 급수 주기를 선택해 주세요."
         android:gravity="center"
         android:fontFamily="@font/netmarblem"
         android:textColor="@color/white"

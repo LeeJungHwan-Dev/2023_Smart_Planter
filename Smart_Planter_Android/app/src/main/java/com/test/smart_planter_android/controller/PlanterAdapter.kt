@@ -21,7 +21,7 @@ class PlanterAdapter(private val context: Context, private val planterPicList: A
     }
 
     override fun getItemCount(): Int {
-        return dateList.size
+        return planterPicList.size
     }
 
     inner class PlanterViewHolder(private val binding: PlanterPhotoBinding) :
