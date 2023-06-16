@@ -23,6 +23,7 @@
     <EditText
         android:id="@+id/connectInputBox"
         android:layout_width="match_parent"
+        android:singleLine="true"
         android:layout_height="50dp"
         android:hint="연결 코드를 입력해주세요."
         android:background="@drawable/input_box"

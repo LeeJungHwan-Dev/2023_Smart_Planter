@@ -7,31 +7,38 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".controller.WaterControllActivity">
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/waterLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
-        android:textSize="50sp"
-        android:paddingRight="20dp"
-        android:layout_marginRight="20dp"
-        android:textStyle="bold"
+        android:text="원하는 시간을 선택해주세요."
+        android:gravity="center"
         android:fontFamily="@font/netmarblem"
         android:textColor="@color/white"
-        android:text="EcoGarden" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="손쉬운 화분 관리"
-        android:gravity="right"
-        android:fontFamily="@font/netmarblem"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:paddingRight="55dp"
-        android:layout_marginRight="30dp"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp"
         />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/timeSetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_back"
+        android:fontFamily="@font/netmarblem"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="적용" />
+
 </LinearLayout>
