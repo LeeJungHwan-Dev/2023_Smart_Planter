@@ -19,7 +19,9 @@ server.initialize_firebase_app()
 
 carmera.takePic()
 upload.upload_file("photo.png","file.png")
-server.getPow()
+server.getPow_R()
+server.getPow_G()
+server.getPow_B()
 
 
 while True:
