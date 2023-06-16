@@ -8,16 +8,32 @@ db = None
 callback_done = threading.Event()
 
 def update():
-    doc_ref = db.collection(u'led').document(u'power')
+    doc_ref = db.collection(u'atx').document(u'LED_d')
     doc_ref.update({u'init_pow': u'50'})
 
-def getPow():
-    docs = db.collection(u"led").document(u'power')
+def getPow_R():
+    docs = db.collection(u"atx").document(u'LED_R')
     doc = docs.get()
 
     if doc.exists:
         value = doc.to_dict()
-        led.changeLed(int(value["pow"]))
+        led.changeLed(int(value["R"]))
+
+def getPow_G():
+    docs = db.collection(u"atx").document(u'LED_G')
+    doc = docs.get()
+
+    if doc.exists:
+        value = doc.to_dict()
+        led.changeLed(int(value["G"]))
+
+def getPow_B():
+    docs = db.collection(u"atx").document(u'LED_B')
+    doc = docs.get()
+
+    if doc.exists:
+        value = doc.to_dict()
+        led.changeLed(int(value["B"]))
 
 def initialize_firebase_app():
     global db
@@ -35,18 +51,29 @@ def initialize_firebase_app():
 
         # Firebase 앱 가져오기
         db = firestore.client()
-        doc_ref = db.collection(u'led').document(u'power')
+        doc_ref = db.collection(u'atx').document(u'power')
         doc_ref.on_snapshot(on_snapshot)
         callback_done.wait()
 
 
 def on_snapshot(doc_snapshot, changes, read_time):
-    #snapshot에서 name값 
     for doc in doc_snapshot:
         doc_dict = doc.to_dict()
-        #pow 필드값이 존재할 경우 변경될 때마다 led 값 변경
-        if "old_pow" in doc_dict:
-            old_pow = int(doc_dict["old_pow"])  # int로 변환
-            LedModule.changeLed(old_pow)
+        
+        # R, G, B 값 변경 여부 확인
+        if "R" in doc_dict:
+            old_R = int(doc_dict["R"])
+            # 변경된 값에 따라 changeLed 함수 호출
+            led.changeLed_R(old_R)
+        
+        if "G" in doc_dict:
+            old_G = int(doc_dict["G"])
+            # 변경된 값에 따라 changeLed 함수 호출
+            led.changeLed_G(old_G)
+        
+        if "B" in doc_dict:
+            old_B = int(doc_dict["B"])
+            # 변경된 값에 따라 changeLed 함수 호출
+            led.changeLed_B(old_B)
 
     callback_done.set()
