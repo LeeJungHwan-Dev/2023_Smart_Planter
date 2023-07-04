@@ -18,14 +18,11 @@
 
 ## 주요 기능 이미지
 <table align="center">
-<tr>
 <td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/3ba675be-1590-42c7-a412-67dc91b165c1" width = "300" hight = "400"/>
 <td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/fc7fd10f-2e31-491f-a15d-57e46c5c8f0e" width = "300" hight = "400"/>
-<tr>
-<tr>
-    <td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/26f06005-1013-40e7-985d-73b71647a77f" width = "300" hight = "400"/>
-    <td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/08561a30-1e18-4cb6-8d43-bac77dec4e58" width = "300" hight = "400"/>
-<tr>
+
+<td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/26f06005-1013-40e7-985d-73b71647a77f" width = "300" hight = "400"/>
+<td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/08561a30-1e18-4cb6-8d43-bac77dec4e58" width = "300" hight = "400"/>
 </table>
 
 <br>
