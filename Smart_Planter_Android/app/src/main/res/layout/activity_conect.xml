@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:gravity="center"
+    tools:context=".conect.ConnectActivity">
+
+    <TextView
+        android:id="@+id/connectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:fontFamily="@font/netmarblem"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+        android:text="연결" />
+
+    <EditText
+        android:id="@+id/connectInputBox"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="50dp"
+        android:hint="연결 코드를 입력해주세요."
+        android:background="@drawable/input_box"
+        android:fontFamily="@font/netmarblem"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/CheckButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/netmarblem"
+        android:background="#27374D"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="확인" />
+</LinearLayout>
