@@ -19,23 +19,12 @@
 ## 주요 기능 이미지
 <table align="center">
 <tr>
-<td><img src = "https://user-images.githubusercontent.com/93726941/176433569-c095cfca-7f98-4dfb-b3bd-2bc8dadc6f24.png" width = "300" hight = "400"/>
-<td><img src = "https://user-images.githubusercontent.com/93726941/176442729-f65d9c1b-4644-4d11-b674-952aad33d9ff.png" width = "300" hight = "400"/>
-<td><img src = "https://user-images.githubusercontent.com/93726941/176442925-0c338fae-9d2d-4759-abad-ef13c00d7171.png" width = "300" hight = "400"/>
+<td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/3ba675be-1590-42c7-a412-67dc91b165c1" width = "300" hight = "400"/>
+<td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/fc7fd10f-2e31-491f-a15d-57e46c5c8f0e" width = "300" hight = "400"/>
 <tr>
 <tr>
-    <td><img src = "https://user-images.githubusercontent.com/93726941/176446116-89501b16-0416-4cd3-b78f-43b37c00322f.png" width = "300" hight = "400"/>
-    <td><img src = "https://user-images.githubusercontent.com/93726941/176446320-10d4c274-4226-4bf5-be72-af39ffb58dfa.png" width = "300" hight = "400"/>
-    <td><img src = "https://user-images.githubusercontent.com/93726941/176446953-7410494b-1a87-411f-aaa6-a25d10a7c879.png" width = "300" hight = "400"/>
-    
-<tr>
-  
-<tr>
-    <td><img src = "https://user-images.githubusercontent.com/93726941/176447302-c1be4f91-17b0-4d34-9e8f-cece2194199b.png" width = "300" hight = "400"/>
-    <td><img src = "https://user-images.githubusercontent.com/93726941/176447333-eade9bf3-a97a-421a-9826-b1685bb43d8c.png" width = "300" hight = "400"/>
-  
-  <td><img src = "https://user-images.githubusercontent.com/93726941/176449152-334411bc-ba51-406c-b687-7c7d32bb8815.png" width = "300" hight = "400"/>
-  
+    <td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/26f06005-1013-40e7-985d-73b71647a77f" width = "300" hight = "400"/>
+    <td><img src = "https://github.com/LeeJungHwan-Dev/2023_Smart_Planter/assets/93726941/08561a30-1e18-4cb6-8d43-bac77dec4e58" width = "300" hight = "400"/>
 <tr>
 </table>
 
@@ -44,18 +33,11 @@
 ## 개발/배포 환경
 - 지원 OS : Android<br>
 - 사용 IDE : Android Studio<br>
-- 언어 : JAVA<br>
+- 언어 : Koltin<br>
 - 배포 여부 : X<br>
 
 ## 사용 라이브러리
 - 이미지 : Glide<br>
-- 로그인 : Naver Login<br>
-- 결제 : Iamport<br>
-- DB : Firebase Cloud storage<br>
-
-## 테스트 환경
-- 안드로이드 Ver : Android 12<br>
-- Sdk Level : 32<br>
-- Ram : 4G<br>
+- DB : Firebase Cloud Storage, Firebase FireStore<br>
   
   
